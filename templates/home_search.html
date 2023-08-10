@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  </head>
+  <body>
+    <h3><a href="{{ url_for('home_page') }}">Return to the Home Page</a></h3>
+  <form action="/home_search" method="POST">
+  <h2><label for="search">Please enter what you would like to search(you can search by author or book title):</label><h2>
+  <input type="text" id="search" name="search" required><br><br>
+  <h4><input type="submit" value="Search"></h4>
+
+  </body>
+</html>

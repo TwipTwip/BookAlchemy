@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  </head>
+  <body>
+    <h2><a href="{{ url_for('home_search') }}">Click here to search books by title or author</a></h2>
+    {% for book in books %}
+    <div> <h3>{{ book.title }}</h3>
+    <form action="{{ url_for('delete_book', book_id=book.book_id, author_id=book.author_id) }}" method="POST">
+        <button type="submit">Delete Book</button>
+        </form>
+    </div>
+    {% endfor %}
+
+  </body>
+</html>
